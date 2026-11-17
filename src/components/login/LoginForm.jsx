@@ -29,9 +29,9 @@ function LoginForm() {
   };
   return (
     <div className="p-10 w-[500px] mx-auto  bg-gray-200 rounded-lg">
-      <div>
-        <h3>email:aarohi@gmail.com</h3>
-        <p>Password:aarohi@123</p>
+      <div className="flex justify-center mb-4">
+        <h3>Email: aarohi@gmail.com | </h3>
+        <p>&nbsp;Password: aarohi@123</p>
       </div>
       <form
         className="flex flex-col gap-5"

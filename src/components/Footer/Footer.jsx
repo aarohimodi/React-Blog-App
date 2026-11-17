@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="mt-16 border-t border-gray-100 bg-[#f4f7f2]">
       <div className="mx-auto max-w-6xl px-6 py-10">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900">
@@ -22,10 +23,20 @@ function Footer() {
             <h3 className="mb-4 font-semibold text-gray-900">Quick Links</h3>
 
             <ul className="space-y-2 text-sm text-gray-500">
-              <li className="cursor-pointer hover:text-green-600">Home</li>
-              <li className="cursor-pointer hover:text-green-600">About</li>
-              <li className="cursor-pointer hover:text-green-600">Login</li>
-              <li className="cursor-pointer hover:text-green-600">Signup</li>
+              <Link to="/">
+                <li className="cursor-pointer hover:text-green-600">Home</li>
+              </Link>
+              <Link to="/about">
+                {" "}
+                <li className="cursor-pointer hover:text-green-600">About</li>
+              </Link>
+              <Link to="/login">
+                <li className="cursor-pointer hover:text-green-600">Login</li>
+              </Link>
+              <Link to="/signup">
+                {" "}
+                <li className="cursor-pointer hover:text-green-600">Signup</li>
+              </Link>
             </ul>
           </div>
 
@@ -46,7 +57,7 @@ function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div>
+          {/* <div>
             <h3 className="mb-4 font-semibold text-gray-900">Stay Connected</h3>
 
             <p className="mb-3 text-sm leading-5 text-gray-500">
@@ -64,14 +75,14 @@ function Footer() {
                 Join
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom */}
-        <div className="mt-8 flex flex-col gap-3 border-t border-gray-200 pt-5 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col justify-center text-center items-center gap-3 border-t border-gray-200 pt-5 text-sm text-gray-500 ">
           <p>© 2026 Blogify. All rights reserved.</p>
 
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <span className="cursor-pointer hover:text-green-600">
               Instagram
             </span>
@@ -79,7 +90,7 @@ function Footer() {
               Facebook
             </span>
             <span className="cursor-pointer hover:text-green-600">Twitter</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
